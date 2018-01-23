@@ -1,0 +1,10 @@
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-pageloader/pageloader.sass";
+
+#app-container {
+  min-width: 789px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}

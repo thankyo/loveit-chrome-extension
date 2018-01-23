@@ -1,0 +1,38 @@
+{
+  "name": "loveit-chrome-extension",
+  "version": "0.0.1",
+  "description": "A chrome extension for loveit project",
+  "scripts": {
+    "build": "node utils/build.js",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "selectn": "^1.1.2",
+    "x2js": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "bulma-pageloader": "^0.1.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.11.2",
+    "fs-extra": "^0.30.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "2.30.1",
+    "jest": "^22.0.5",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "^2.10.1",
+    "write-file-webpack-plugin": "3.4.2"
+  }
+}

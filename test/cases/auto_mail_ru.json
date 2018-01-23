@@ -1,0 +1,41 @@
+{
+  "description": "Авто Mail.Ru - тест-драйвы автомобилей, test-drive авто.",
+  "mrc": {
+    "description": "«Авто Mail.Ru» - тест-драйвы автомобилей, test-drive авто.",
+    "title": "Тест-драйвы автомобилей. Test-drive авто на сайте «Авто Mail.Ru»"
+  },
+  "og": {
+    "description": "«Авто Mail.Ru» - тест-драйвы автомобилей, test-drive авто.",
+    "image": {
+      "height": "630",
+      "src": "https://auto.mail.ru/img/common/share/testdrives_1200x630.png",
+      "width": "1200"
+    },
+    "site_name": "Авто Mail.Ru",
+    "title": "Тест-драйвы автомобилей. Test-drive авто на сайте «Авто Mail.Ru»",
+    "url": "https://auto.mail.ru/testdrives/"
+  },
+  "page": {
+    "canonical": "https://auto.mail.ru/testdrives/",
+    "description": "Авто Mail.Ru - тест-драйвы автомобилей, test-drive авто.",
+    "image_src": "https://auto.mail.ru/img/common/share/testdrives_1200x630.png",
+    "title": "Тест-драйвы автомобилей. Test-drive авто на сайте Авто Mail.Ru"
+  },
+  "relap-image": "https://auto.mail.ru/img/common/default-auto-share-article_288x200.jpg",
+  "theme-color": "#168DE2",
+  "twitter": {
+    "card": "summary_large_image",
+    "description": "«Авто Mail.Ru» - тест-драйвы автомобилей, test-drive авто.",
+    "domain": "auto.mail.ru",
+    "image": {
+      "src": "https://auto.mail.ru/img/common/share/testdrives_twitter_1200x630.png"
+    },
+    "site": "@auto_mailru",
+    "title": "Тест-драйвы автомобилей. Test-drive авто на сайте «Авто Mail.Ru»"
+  },
+  "vk": {
+    "image": {
+      "src": "https://auto.mail.ru/img/common/share/testdrives_1200x630.png"
+    }
+  }
+}

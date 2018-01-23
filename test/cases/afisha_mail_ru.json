@@ -1,0 +1,41 @@
+{
+  "description": "Охотники за привидениями (Ghostbusters) - Перезапуск легендарной кинофраншизы. Более 30 лет с премьерного показа первого фильма. Более 25 лет с тех пор, когда привидения ...",
+  "fb": {
+    "app_id": "767446473285171",
+    "pages": "244057642287701"
+  },
+  "mailru-verification": "06414092614abd72",
+  "mrc": {
+    "description": "Ремейк знаменитых «Охотников за привидениями», которые в новой версии стали охотницами",
+    "title": "«Охотники за привидениями» (2016)"
+  },
+  "og": {
+    "description": "Ремейк знаменитых «Охотников за привидениями», которые в новой версии стали охотницами",
+    "image": {
+      "height": "712",
+      "src": "https://pic.afisha.mail.ru/share/event/870951/?20160726191937.1",
+      "width": "486"
+    },
+    "site_name": "Кино Mail.Ru",
+    "title": "«Охотники за привидениями» (2016)",
+    "type": "video.movie",
+    "url": "https://afisha.mail.ru/cinema/movies/870951_ohotniki_za_privideniyami/"
+  },
+  "page": {
+    "canonical": "https://afisha.mail.ru/cinema/movies/870951_ohotniki_za_privideniyami/",
+    "description": "Охотники за привидениями (Ghostbusters) - Перезапуск легендарной кинофраншизы. Более 30 лет с премьерного показа первого фильма. Более 25 лет с тех пор, когда привидения ...",
+    "image_src": "https://pic.afisha.mail.ru/share/event/870951/?20160726191937.1",
+    "title": "Охотники за привидениями (Ghostbusters, 2016), отзывы, кадры из фильма, актеры, дата выхода, расписание сеансов в кино - Кино Mail.Ru"
+  },
+  "theme-color": "#168DE2",
+  "twitter": {
+    "card": "summary_large_image",
+    "description": "Ремейк знаменитых «Охотников за привидениями», которые в новой версии стали охотницами",
+    "domain": "afisha.mail.ru",
+    "image": {
+      "src": "https://pic.afisha.mail.ru/share/event/870951/?20160726191937.1"
+    },
+    "site": "@kino_mailru",
+    "title": "«Охотники за привидениями» (2016)"
+  }
+}

@@ -1,0 +1,138 @@
+<head><meta charset="utf-8"/><title>Охотники за привидениями (Ghostbusters, 2016), отзывы, кадры из фильма, актеры, дата выхода, расписание сеансов в кино - Кино Mail.Ru</title><meta name="description" content="Охотники за привидениями (Ghostbusters) - Перезапуск легендарной кинофраншизы. Более 30 лет с премьерного показа первого фильма. Более 25 лет с тех пор, когда привидения ..."/><meta http-equiv="x-ua-compatible" content="IE=edge"/><link rel="shortcut icon" href="https://afisha.mail.ru/favicon.ico?v2"/><link rel="canonical" href="https://afisha.mail.ru/cinema/movies/870951_ohotniki_za_privideniyami/"/><link rel="image_src" href="https://pic.afisha.mail.ru/share/event/870951/?20160726191937.1"/><meta name="mrc__share_title" content="«Охотники за привидениями» (2016)"/><meta name="mrc__share_description" content="Ремейк знаменитых «Охотников за привидениями», которые в новой версии стали охотницами"/><meta property="og:image" content="https://pic.afisha.mail.ru/share/event/870951/?20160726191937.1"/><meta property="og:image:width" content="486"/><meta property="og:image:height" content="712"/><meta property="og:title" content="«Охотники за привидениями» (2016)"/><meta property="og:site_name" content="Кино Mail.Ru"/><meta name="theme-color" content="#168DE2"/><meta property="og:description" content="Ремейк знаменитых «Охотников за привидениями», которые в новой версии стали охотницами"/><meta property="og:url" content="https://afisha.mail.ru/cinema/movies/870951_ohotniki_za_privideniyami/"/><meta property="og:type" content="video.movie"/><meta name="twitter:card" value="summary_large_image"/><meta name="twitter:description" content="Ремейк знаменитых «Охотников за привидениями», которые в новой версии стали охотницами"/><meta name="twitter:domain" content="afisha.mail.ru"/><meta name="twitter:image:src" content="https://pic.afisha.mail.ru/share/event/870951/?20160726191937.1"/><meta name="twitter:site" value="@kino_mailru"/><meta name="twitter:title" content="«Охотники за привидениями» (2016)"/><link href="/rss/news/" rel="alternate" title="Новости — Кино Mail.Ru" type="application/rss+xml"/><meta name="mailru-verification" content="06414092614abd72"/><meta property="fb:app_id" content="767446473285171"/><meta property="fb:pages" content="244057642287701"/><link rel="apple-touch-startup-image" href="https://afisha.mail.ru/apple-touch-icon.png"/><link rel="apple-touch-icon-precomposed" href="https://afisha.mail.ru/apple-touch-icon-precomposed.png"/><link rel="apple-touch-icon" href="https://afisha.mail.ru/apple-touch-icon.png"/><link rel="apple-touch-icon" sizes="72x72" href="https://afisha.mail.ru/apple-touch-icon-ipad.png"/><link rel="apple-touch-icon" sizes="114x114" href="https://afisha.mail.ru/apple-touch-icon-retina.png"/>
+
+
+
+
+
+	<link rel="stylesheet" href="/-/76a55bf1/bem/web/web.bundles/common/_common.css"/>
+
+	<script type="text/javascript">var jsProfiler = new Array(); jsProfiler.push((new Date()).getTime());</script>
+	<!--[if lt IE 9]>
+	<script src="/v2/js/common/vendor/html5.js"></script>
+	<![endif]-->
+	<script>(function (window) {
+      "use strict";
+
+      var OPTIONS = window.SCREEN_SIZE_OPTIONS || {};
+      // wrapper + options.padding * 2
+      var sizeList = [980,1220,1340];
+      var nameList = ['small', 'medium', 'large'];
+      var sizesLength = sizeList.length;
+      var isBranding = false;
+      var htmlElement = document.documentElement;
+      var lastState, className;
+      var options = {
+        padding: 20,
+        sideWidth: 140,
+        largeSideWidth: 240,
+        bannerStub: sizeList[0],
+        minBranding: OPTIONS.minBranding || sizeList[1],
+        maxBranding: 1920,
+        classRe: /\s*screen_(\S+)/gi,
+        classPrefix: 'screen_'
+      };
+
+      // ширина экрана для больших ушей, когда они полностью помещаются для самого большого экрана
+      var widthForLargeSide = sizeList[sizeList.length - 1] + (options.largeSideWidth + options.padding) * 2;
+
+      function screenSize(branding) {
+        var windowWidth = window.innerWidth;
+        var actualWidth = windowWidth;
+        var sideWidth, canBranding, size, result, state;
+
+        // запоминаем состояние последнего вызова, например screenSize(true) в слоте п-брендинга
+        if (typeof branding === 'boolean') {
+          isBranding = branding;
+        }
+
+        if (isBranding) {
+          sideWidth = windowWidth > widthForLargeSide && options.largeSideWidth || options.sideWidth;
+
+          // используем 20 отступы по бокам под брендирование
+          if (sideWidth) {
+            actualWidth -= (sideWidth + options.padding) * 2;
+          }
+        }
+
+        canBranding = windowWidth >= options.minBranding && windowWidth <= options.maxBranding;
+
+        // не показываем брендинг на экраны меньше 1024 и больше 1900
+        if (!canBranding) {
+          actualWidth = windowWidth;
+        }
+
+        // подбираем экран под окно пользователя с учетом брендинга
+        for (var sizeNo = 1; sizeNo < sizesLength; sizeNo++) {
+          if (actualWidth < sizeList[sizeNo]) {
+            size = nameList[sizeNo - 1];
+            break;
+          }
+        }
+
+        if (!size) {
+          size = nameList[nameList.length - 1];
+        }
+
+        state = [size, isBranding, canBranding, sideWidth].join();
+
+        if (lastState != state) {
+          lastState = state;
+
+          className = htmlElement.className.replace(options.classRe, '').split(' ');
+          className.push(options.classPrefix + size);
+
+          if (isBranding) {
+            className.push(options.classPrefix + 'branding-p_need');
+            if (canBranding) {
+              className.push(options.classPrefix + 'branding-p');
+              className.push(options.classPrefix + 'branding-p_' + sideWidth);
+            } else if (actualWidth >= options.bannerStub && actualWidth < options.minBranding) {
+              className.push(options.classPrefix + 'branding-p_banner-stub');
+            }
+          }
+
+          htmlElement.className = className.join(' ');
+          try {
+            window.dispatchEvent(new Event('resize'));
+          } catch (ex) {}
+        }
+      }
+
+      /**
+       * Создает функцию, игнорирующую вызовы происходящие чаще заданого интервала
+       * @param originalFn функция, частоту вызова которой необходимо ограничить
+       * @param [timeout = 100] интервал
+       * @param [callImmediately = false] флаг, указывающий что функция должна выполняться в начале группы вызовов
+       * @returns {Function}
+       */
+      function debounce (originalFn, timeout, callImmediately) {
+        var timer = null;
+        return function debounced () {
+          var context = this,
+            args = arguments;
+
+          function delayed () {
+            if (!callImmediately) {
+              originalFn.apply(context, args);
+            }
+            timer = null;
+          }
+
+          if (timer !== null) {
+            clearTimeout(timer);
+          } else if (callImmediately) {
+            originalFn.apply(context, args);
+          }
+          timer = setTimeout(delayed, timeout || 100);
+        };
+      }
+
+      screenSize();
+      window.screenSize = screenSize;
+      if (window.addEventListener) {
+        window.addEventListener("resize", debounce(screenSize), false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onresize", debounce(screenSize));
+      }
+    })(this);
+	</script></head>

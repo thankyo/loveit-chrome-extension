@@ -1,0 +1,18 @@
+{
+  "description": "Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки.",
+  "og": {
+    "description": "Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки.",
+    "image": {
+      "src": "https://icdn.lenta.ru/assets/webpack/images/04ceff52e5b673154a365683e768578e.lenta_og.png"
+    },
+    "title": "Лента.Ру",
+    "type": "article",
+    "url": "https://lenta.ru/"
+  },
+  "page": {
+    "canonical": "https://lenta.ru/",
+    "description": "Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки.",
+    "title": "Lenta.ru"
+  },
+  "yandex-verification": "688214af2cd6e1a7"
+}

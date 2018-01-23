@@ -1,0 +1,15 @@
+{
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-128.png"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://graph.facebook.com https://vk.com https://connect.ok.ru 'unsafe-eval'; object-src 'self'"
+}

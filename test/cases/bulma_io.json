@@ -1,0 +1,33 @@
+{
+  "description": "Bulma is an open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.",
+  "msapplication-config": "https://bulma.io/favicons/browserconfig.xml?v=201701041855",
+  "og": {
+    "description": "Bulma is an open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.",
+    "image": {
+      "height": "630",
+      "src": "https://bulma.io/images/bulma-banner.png",
+      "type": "image/png",
+      "width": "1200"
+    },
+    "title": "Bulma: a modern CSS framework based on Flexbox",
+    "type": "website",
+    "url": "https://bulma.io"
+  },
+  "page": {
+    "canonical": "https://bulma.io/",
+    "description": "Bulma is an open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.",
+    "title": "Bulma: a modern CSS framework based on Flexbox"
+  },
+  "theme-color": "#00d1b2",
+  "twitter": {
+    "card": "summary_large_image",
+    "creator": "@jgthms",
+    "description": "Bulma is an open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.",
+    "image": {
+      "src": "https://bulma.io/images/bulma-banner.png"
+    },
+    "site": "@jgthms",
+    "title": "Bulma: a modern CSS framework based on Flexbox"
+  },
+  "viewport": "width=device-width, initial-scale=1"
+}

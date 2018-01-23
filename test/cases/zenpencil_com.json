@@ -1,0 +1,15 @@
+{
+  "Comic-Easel": "1.14",
+  "ComicPress": "4.1",
+  "description": "Cartoon quotes from inspirational folks",
+  "keywords": "quotes, inspirational, motivational, cartoons, comics, webcomic, inspire, inspiring, art, poetry",
+  "og": {
+    "url": "http://zenpencils.com"
+  },
+  "page": {
+    "canonical": "https://zenpencils.com/",
+    "description": "Cartoon quotes from inspirational folks",
+    "title": "ZEN PENCILS – Cartoon quotes from inspirational folks"
+  },
+  "viewport": "width=device-width; initial-scale=1.0"
+}

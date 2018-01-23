@@ -1,0 +1,8 @@
+{
+  "description": "Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки.",
+  "image": {
+    "url": "https://icdn.lenta.ru/assets/webpack/images/04ceff52e5b673154a365683e768578e.lenta_og.png"
+  },
+  "title": "Лента.Ру",
+  "type": "article"
+}

@@ -1,0 +1,179 @@
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link rel="manifest" href="/manifest.json"/>
+	<link rel="canonical" href="https://auto.mail.ru/testdrives/"/>
+	<title>Тест-драйвы автомобилей. Test-drive авто на сайте Авто Mail.Ru</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2.10"/>
+	<meta name="keywords" content=""/>
+	<meta name="description" content="Авто Mail.Ru - тест-драйвы автомобилей, test-drive авто."/>
+	<meta property="og:site_name" content="Авто Mail.Ru"/>
+	<meta property="og:url" content="https://auto.mail.ru/testdrives/"/>
+	<meta name="mrc__share_title" content="Тест-драйвы автомобилей. Test-drive авто на сайте «Авто Mail.Ru»"/>
+	<meta property="og:title" content="Тест-драйвы автомобилей. Test-drive авто на сайте «Авто Mail.Ru»"/>
+	<meta name="mrc__share_description" content="«Авто Mail.Ru» - тест-драйвы автомобилей, test-drive авто."/>
+	<meta property="og:description" content="«Авто Mail.Ru» - тест-драйвы автомобилей, test-drive авто."/>
+	<meta property="og:image" content="https://auto.mail.ru/img/common/share/testdrives_1200x630.png"/>
+	<link rel="image_src" href="https://auto.mail.ru/img/common/share/testdrives_1200x630.png"/>
+	<meta name="relap-image" content="https://auto.mail.ru/img/common/default-auto-share-article_288x200.jpg"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="vk:image" content="https://auto.mail.ru/img/common/share/testdrives_1200x630.png"/>
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:description" content="«Авто Mail.Ru» - тест-драйвы автомобилей, test-drive авто."/>
+	<meta name="twitter:domain" content="auto.mail.ru"/>
+	<meta name="twitter:image" content="https://auto.mail.ru/img/common/share/testdrives_twitter_1200x630.png"/>
+	<meta name="twitter:site" content="@auto_mailru"/>
+	<meta name="twitter:title" content="Тест-драйвы автомобилей. Test-drive авто на сайте «Авто Mail.Ru»"/>
+	<meta name="theme-color" content="#168DE2"/>
+	<link rel="stylesheet" href="/-/4e10244f/bem/auto/web/web.bundles/common/_common.css"/>
+	<script>(function (window) {
+      "use strict";
+
+      var OPTIONS = window.SCREEN_SIZE_OPTIONS || {};
+      // wrapper + options.padding * 2
+      var sizeList = [980,1220,1340];
+      var nameList = ['small', 'medium', 'large'];
+      var sizesLength = sizeList.length;
+      var isBranding = false;
+      var htmlElement = document.documentElement;
+      var lastState, className;
+      var options = {
+        padding: 20,
+        sideWidth: 140,
+        largeSideWidth: 240,
+        bannerStub: sizeList[0],
+        minBranding: OPTIONS.minBranding || sizeList[1],
+        maxBranding: 1920,
+        classRe: /\s*screen_(\S+)/gi,
+        classPrefix: 'screen_'
+      };
+
+      // ширина экрана для больших ушей, когда они полностью помещаются для самого большого экрана
+      var widthForLargeSide = sizeList[sizeList.length - 1] + (options.largeSideWidth + options.padding) * 2;
+
+      function screenSize(branding) {
+        var windowWidth = window.innerWidth;
+        var actualWidth = windowWidth;
+        var sideWidth, canBranding, size, result, state;
+
+        // запоминаем состояние последнего вызова, например screenSize(true) в слоте п-брендинга
+        if (typeof branding === 'boolean') {
+          isBranding = branding;
+        }
+
+        if (isBranding) {
+          sideWidth = windowWidth > widthForLargeSide && options.largeSideWidth || options.sideWidth;
+
+          // используем 20 отступы по бокам под брендирование
+          if (sideWidth) {
+            actualWidth -= (sideWidth + options.padding) * 2;
+          }
+        }
+
+        canBranding = windowWidth >= options.minBranding && windowWidth <= options.maxBranding;
+
+        // не показываем брендинг на экраны меньше 1024 и больше 1900
+        if (!canBranding) {
+          actualWidth = windowWidth;
+        }
+
+        // подбираем экран под окно пользователя с учетом брендинга
+        for (var sizeNo = 1; sizeNo < sizesLength; sizeNo++) {
+          if (actualWidth < sizeList[sizeNo]) {
+            size = nameList[sizeNo - 1];
+            break;
+          }
+        }
+
+        if (!size) {
+          size = nameList[nameList.length - 1];
+        }
+
+        state = [size, isBranding, canBranding, sideWidth].join();
+
+        if (lastState != state) {
+          lastState = state;
+
+          className = htmlElement.className.replace(options.classRe, '').split(' ');
+          className.push(options.classPrefix + size);
+
+          if (isBranding) {
+            className.push(options.classPrefix + 'branding-p_need');
+            if (canBranding) {
+              className.push(options.classPrefix + 'branding-p');
+              className.push(options.classPrefix + 'branding-p_' + sideWidth);
+            } else if (actualWidth >= options.bannerStub && actualWidth < options.minBranding) {
+              className.push(options.classPrefix + 'branding-p_banner-stub');
+            }
+          }
+
+          htmlElement.className = className.join(' ');
+          try {
+            window.dispatchEvent(new Event('resize'));
+          } catch (ex) {}
+        }
+      }
+
+      /**
+       * Создает функцию, игнорирующую вызовы происходящие чаще заданого интервала
+       * @param originalFn функция, частоту вызова которой необходимо ограничить
+       * @param [timeout = 100] интервал
+       * @param [callImmediately = false] флаг, указывающий что функция должна выполняться в начале группы вызовов
+       * @returns {Function}
+       */
+      function debounce (originalFn, timeout, callImmediately) {
+        var timer = null;
+        return function debounced () {
+          var context = this,
+            args = arguments;
+
+          function delayed () {
+            if (!callImmediately) {
+              originalFn.apply(context, args);
+            }
+            timer = null;
+          }
+
+          if (timer !== null) {
+            clearTimeout(timer);
+          } else if (callImmediately) {
+            originalFn.apply(context, args);
+          }
+          timer = setTimeout(delayed, timeout || 100);
+        };
+      }
+
+      screenSize();
+      window.screenSize = screenSize;
+      if (window.addEventListener) {
+        window.addEventListener("resize", debounce(screenSize), false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onresize", debounce(screenSize));
+      }
+    })(this);
+	</script><!-- rb: 38193 (recommendations from go.mail.ru) --><script>
+  !function(r){
+    var SOURCE = "search_news";
+    var SOURCE_PARAMS = null;
+    r.ru=r.ru||{},r.ru.mail=r.ru.mail||{},r.ru.mail.vendor=r.ru.mail.vendor||{};
+    var u=r.ru.mail.vendor.relapSources=r.ru.mail.vendor.relapSources||{};
+    SOURCE in u||(u[SOURCE]=SOURCE_PARAMS);
+  }(window);
+
+  !function(r){
+    var SOURCE = "search_sport";
+    var SOURCE_PARAMS = null;
+    r.ru=r.ru||{},r.ru.mail=r.ru.mail||{},r.ru.mail.vendor=r.ru.mail.vendor||{};
+    var u=r.ru.mail.vendor.relapSources=r.ru.mail.vendor.relapSources||{};
+    SOURCE in u||(u[SOURCE]=SOURCE_PARAMS);
+  }(window);
+
+  !function(r){
+    var SOURCE = "search_hi_tech";
+    var SOURCE_PARAMS = null;
+    r.ru=r.ru||{},r.ru.mail=r.ru.mail||{},r.ru.mail.vendor=r.ru.mail.vendor||{};
+    var u=r.ru.mail.vendor.relapSources=r.ru.mail.vendor.relapSources||{};
+    SOURCE in u||(u[SOURCE]=SOURCE_PARAMS);
+  }(window);
+</script><!-- /rb: 38193 (recommendations from go.mail.ru) --><script src="/-/3a0752a4/js/cmpld/_recsystemHead.js"></script></head>
