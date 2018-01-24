@@ -29,7 +29,7 @@ class CreateButton extends Component {
   }
 }
 
-function LoveItOGView({ title = "unknown", description = "missing", type = "unknown", image: { url = "" } = {} }) {
+function LoveItOGView({ title = "unknown", description = "missing", type = "unknown", image: { url = "" } = {}, tags }) {
   let style = {
     width: 320,
     height: 320,
@@ -44,27 +44,33 @@ function LoveItOGView({ title = "unknown", description = "missing", type = "unkn
       <p className="subtitle">{type}</p>
       <div className="content">
         {description}
+        <div className="tags">
+          {tags.map((tag, i) => <span key={i} className="tag is-primary">{tag}</span>)}
+        </div>
       </div>
     </article>
   )
 }
 
-function AuthorVisual({ firstName = "Unknown", lastName = "Unknown", avatar = "https://bulma.io/images/placeholders/96x96.png" }) {
+function AuthorVisual({ firstName = "Unknown", lastName = "Unknown", avatar = "https://bulma.io/images/placeholders/96x96.png", tags = [] }) {
   return (
     <article className="tile is-child notification is-primary">
       <img src={avatar}/>
       <p className="title is-4">{firstName} {lastName}</p>
+      <div className="tags is-info">
+        {tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
+      </div>
     </article>
   )
 }
 
 export default function LoveItInfo(props) {
-  let { project, ogObj, onCreate, possible, error } = props;
+  let { project, ogObj, onCreate, possible, error, tags } = props;
   return (
     <div className="tile is-ancestor">
       <div className="tile is-6 is-vertical is-parent">
         <AuthorVisual {...project}/>
-        <LoveItOGView {...ogObj}/>
+        <LoveItOGView {...ogObj} tags={tags}/>
       </div>
       <div className="tile is-6 is-vertical is-parent">
         <ObjectInfo title="author" obj={project}/>
