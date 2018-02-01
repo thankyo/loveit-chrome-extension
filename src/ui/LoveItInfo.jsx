@@ -52,11 +52,11 @@ function LoveItOGView({ title = "unknown", description = "missing", type = "unkn
   )
 }
 
-function AuthorVisual({ firstName = "Unknown", lastName = "Unknown", avatar = "https://bulma.io/images/placeholders/96x96.png", tags = [] }) {
+function ProjectVisual({ description = "Unknown", avatar = "https://bulma.io/images/placeholders/96x96.png", tags = [] }) {
   return (
     <article className="tile is-child notification is-primary">
       <img src={avatar}/>
-      <p className="title is-4">{firstName} {lastName}</p>
+      <p className="title is-4">{description}</p>
       <div className="tags is-info">
         {tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
       </div>
@@ -65,12 +65,12 @@ function AuthorVisual({ firstName = "Unknown", lastName = "Unknown", avatar = "h
 }
 
 export default function LoveItInfo(props) {
-  let { project, ogObj, onCreate, possible, error, tags } = props;
+  let { project, ogObj, onCreate, possible, error } = props;
   return (
     <div className="tile is-ancestor">
       <div className="tile is-6 is-vertical is-parent">
-        <AuthorVisual {...project}/>
-        <LoveItOGView {...ogObj} tags={tags}/>
+        <ProjectVisual {...project}/>
+        <LoveItOGView {...ogObj}/>
       </div>
       <div className="tile is-6 is-vertical is-parent">
         <ObjectInfo title="author" obj={project}/>
