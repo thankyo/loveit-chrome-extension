@@ -9,24 +9,29 @@ function asString(obj, prefix = "") {
         return agg;
       }
 
-      if (typeof fieldVal === "object") {
+      if (Array.isArray(fieldVal)) {
+        return agg.concat([
+          <dt key={prefix + field}><b>{prefix}{field}</b></dt>,
+          <dd key={prefix + field + ":value"}>{fieldVal.join(", ")}</dd>,
+        ]);
+      } else if (typeof fieldVal === "object") {
         return agg.concat(asString(fieldVal, `${prefix}${field}:`));
       } else if (typeof fieldVal === "string") {
         let shortVal = fieldVal.length > 35 ? fieldVal.substr(0, 32) + "..." : fieldVal;
         if (fieldVal.startsWith("http")) {
           return agg.concat([
-            <dt><b>{prefix}{field}</b></dt>,
-            <dd><a href={fieldVal} target="_blank">{shortVal}</a></dd>,
+            <dt key={prefix + field}><b>{prefix}{field}</b></dt>,
+            <dd key={prefix + field + ":value"}><a href={fieldVal} target="_blank">{shortVal}</a></dd>,
           ]);
         }
         return agg.concat([
-          <dt><b>{prefix}{field}</b></dt>,
-          <dd>{shortVal}</dd>,
+          <dt key={prefix + field}><b>{prefix}{field}</b></dt>,
+          <dd key={prefix + field + ":value"}>{shortVal}</dd>,
         ]);
       } else {
         return agg.concat([
-          <dt><b>{prefix}{field}</b></dt>,
-          <dd>{fieldVal}</dd>,
+          <dt key={prefix + field}><b>{prefix}{field}</b></dt>,
+          <dd key={prefix + field + ":value"}>{fieldVal}</dd>,
         ]);
       }
     }, []);

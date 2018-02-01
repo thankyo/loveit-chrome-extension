@@ -2,7 +2,7 @@ import selectn from "selectn";
 
 function setField(field, val, obj) {
   if (field.endsWith("Int")) {
-    obj[field] = parseInt(val);
+    obj[field.substr(0, field.length - 3)] = parseInt(val);
   } else {
     obj[field] = val;
   }

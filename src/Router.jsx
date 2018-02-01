@@ -24,7 +24,7 @@ export let OG_MAPPING = {
 
 function toPossibleOG(url, info) {
   let mappedValue = readMapping(info, OG_MAPPING);
-  return Object.assign({ url, type: "article"}, mappedValue);
+  return Object.assign({ url, tags: []}, mappedValue);
 }
 
 export default class Router extends Component {
